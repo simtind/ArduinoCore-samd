@@ -660,6 +660,56 @@ mzero_bl.bootloader.tool.default=openocd-withbootsize
 mzero_bl.bootloader.low_fuses=0xff
 mzero_bl.bootloader.file=mzero/Bootloader_D21_M0_150515.hex
 
+# Simtind Lora Sensor Board (with) Bootloader
+# ----------------------------
+lorasense_bl.name=Lora Sensor Board
+lorasense_bl.vid.0=0x2a03
+lorasense_bl.pid.0=0x004d
+lorasense_bl.vid.1=0x2a03
+lorasense_bl.pid.1=0x804d
+lorasense_bl.vid.2=0x2a03
+lorasense_bl.pid.2=0x004e
+lorasense_bl.vid.3=0x2a03
+lorasense_bl.pid.3=0x804e
+lorasense_bl.upload_port.0.vid=0x2a03
+lorasense_bl.upload_port.0.pid=0x004d
+lorasense_bl.upload_port.1.vid=0x2a03
+lorasense_bl.upload_port.1.pid=0x804d
+lorasense_bl.upload_port.2.vid=0x2a03
+lorasense_bl.upload_port.2.pid=0x004e
+lorasense_bl.upload_port.3.vid=0x2a03
+lorasense_bl.upload_port.3.pid=0x804e
+lorasense_bl.upload_port.4.board=lorasense
+lorasense_bl.upload.tool=jlink
+lorasense_bl.upload.tool.default=jlink
+lorasense_bl.upload.tool.network=arduino_ota
+lorasense_bl.upload.protocol=swd
+lorasense_bl.upload.maximum_size=262144
+lorasense_bl.upload.maximum_data_size=32768
+lorasense_bl.upload.use_1200bps_touch=true
+lorasense_bl.upload.wait_for_upload_port=true
+lorasense_bl.upload.native_usb=true
+lorasense_bl.upload.speed=57600
+lorasense_bl.build.mcu=cortex-m0plus
+lorasense_bl.build.f_cpu=48000000L
+lorasense_bl.build.usb_product="Lora Sensor Board"
+lorasense_bl.build.board=SAM_ZERO
+lorasense_bl.build.core=arduino
+lorasense_bl.build.extra_flags=-D__SAMD21G18A__ -mthumb {build.usb_flags}
+lorasense_bl.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+lorasense_bl.build.openocdscript=openocd_scripts/arduino_zero.cfg
+lorasense_bl.build.variant=arduino_mzero
+lorasense_bl.build.variant_system_lib=
+lorasense_bl.build.vid=0x2a03
+lorasense_bl.build.pid=0x804e
+lorasense_bl.build.preferred_out_format=hex
+lorasense_bl.bootloader.size=0x4000
+lorasense_bl.build.emu.mcu=atmega2560
+lorasense_bl.bootloader.tool=openocd-withbootsize
+lorasense_bl.bootloader.tool.default=openocd-withbootsize
+lorasense_bl.bootloader.low_fuses=0xff
+lorasense_bl.bootloader.file=lora_sensor_board/samd21_sam_ba_simtind_lora_sensor_board.hex
+
 # Arduino Tian (with) Bootloader
 # ------------------------------
 tian.name=Arduino Tian
