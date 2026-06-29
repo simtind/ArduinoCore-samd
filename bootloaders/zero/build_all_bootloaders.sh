@@ -32,5 +32,8 @@ mv -v samd21_sam_ba_arduino_mkrnb1500.* ../mkrnb1500/
 BOARD_ID=arduino_nano_33_iot NAME=samd21_sam_ba_arduino_nano_33_iot make clean all
 mv -v samd21_sam_ba_arduino_nano_33_iot.* ../nano_33_iot/
 
+BOARD_ID=simtind_lora_sense NAME=samd21_sam_ba_simtind_lora_sense make clean all
+mv -v samd21_sam_ba_simtind_lora_sense.* ../simtind_lora_sense/
+
 echo Done building bootloaders!
 
